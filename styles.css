@@ -18,13 +18,16 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 150px;
+  background: #eee;
 }
 
-header {
+header, main {
+  background: #fff
 }
 
 .navbar {
+  top: 0; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,4 +50,74 @@ header {
 .listLinks a{
     text-decoration: none;
     color: var(--dark)
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  row-gap: 100px;
+}
+
+.hero, .companyInfo {
+  margin: 0 20px;
+
+}
+
+.hero {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero img {
+  height: 300px;
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  row-gap: 50px;
+}
+
+.heroInfo h2 {
+  width: 50%;
+  font-size: 2.5rem;
+  color: var(--prussian-blue)
+}
+
+.heroInfo p {
+  width: 70%;
+  color: var(--celadon-blue)
+}
+
+.buttonContainer button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--prussian-blue);
+  font-weight: 600;
+  cursor: pointer
+}
+
+.buttonContainer button:first-child {
+  background-color: var(--prussian-blue);
+  color: #fff;
+}
+
+.buttonContainer button:nth-child(2){
+  background-color: #fff;
+  color: var(--prussian-blue);
+}
+
+.companyInfo {
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  padding: 50px 80px
+}
+
+.companyInfo p {
+  text-align: center;
+  color: var(--celadon-blue);
 }
