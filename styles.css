@@ -23,7 +23,7 @@ body {
 }
 
 header, main {
-  background: #fff
+  background: var(--honeydew)
 }
 
 .navbar {
@@ -50,6 +50,10 @@ header, main {
 .listLinks a{
     text-decoration: none;
     color: var(--dark)
+}
+
+.listLinks a:hover {
+  color: var(--gray)
 }
 
 main {
@@ -103,12 +107,23 @@ main {
 
 .buttonContainer button:first-child {
   background-color: var(--prussian-blue);
-  color: #fff;
+  color: var(--honeydew);
+}
+
+.buttonContainer button:first-child:hover {
+  background-color: var(--celadon-blue);  
+  border-color: var(--celadon-blue);
 }
 
 .buttonContainer button:nth-child(2){
-  background-color: #fff;
+  background-color: var(--honeydew);
   color: var(--prussian-blue);
+}
+
+.buttonContainer button:nth-child(2):hover{
+  background-color: var(--celadon-blue);
+  border-color: var(--celadon-blue);
+  color: var(--honeydew)
 }
 
 .companyInfo {
