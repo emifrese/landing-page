@@ -1,33 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
 
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 :root {
-    --imperial-red: #e63946ff;
-    --honeydew: #f1faeeff;
-    --powder-blue: #a8dadcff;
-    --celadon-blue: #457b9dff;
-    --prussian-blue: #1d3557ff;
-    --dark: #212529;
-    --gray: #adb5bd;
+  --imperial-red: #e63946ff;
+  --honeydew: #f1faeeff;
+  --powder-blue: #a8dadcff;
+  --celadon-blue: #457b9dff;
+  --prussian-blue: #1d3557ff;
+  --dark: #212529;
+  --gray: #adb5bd;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 body {
-  margin: 0 150px;
+  padding: 0 150px;
   background: #eee;
 }
 
-header, main {
-  background: var(--honeydew)
+header,
+main,
+footer {
+  background: var(--honeydew);
 }
 
 .navbar {
-  top: 0; 
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,25 +61,26 @@ header, main {
   gap: 1rem;
 }
 
-.listLinks a{
-    text-decoration: none;
-    color: var(--dark)
+.listLinks a {
+  text-decoration: none;
+  color: var(--dark);
 }
 
 .listLinks a:hover {
-  color: var(--gray)
+  color: var(--gray);
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 20px 0;
   row-gap: 100px;
 }
 
-.hero, .companyInfo {
+.hero,
+.companyInfo {
   margin: 0 20px;
-
 }
 
 .hero {
@@ -76,7 +91,7 @@ main {
 }
 
 .hero img {
-  height: 300px;
+  height: 280px;
 }
 
 .heroInfo {
@@ -86,15 +101,15 @@ main {
   row-gap: 50px;
 }
 
-.heroInfo h2 {
+.heroInfo h1 {
   width: 50%;
   font-size: 2.5rem;
-  color: var(--prussian-blue)
+  color: var(--prussian-blue);
 }
 
 .heroInfo p {
   width: 70%;
-  color: var(--celadon-blue)
+  color: var(--celadon-blue);
 }
 
 .buttonContainer button {
@@ -102,7 +117,7 @@ main {
   border-radius: 20px;
   border: 2px solid var(--prussian-blue);
   font-weight: 600;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .buttonContainer button:first-child {
@@ -111,28 +126,128 @@ main {
 }
 
 .buttonContainer button:first-child:hover {
-  background-color: var(--celadon-blue);  
+  background-color: var(--celadon-blue);
   border-color: var(--celadon-blue);
 }
 
-.buttonContainer button:nth-child(2){
+.buttonContainer button:nth-child(2) {
   background-color: var(--honeydew);
   color: var(--prussian-blue);
 }
 
-.buttonContainer button:nth-child(2):hover{
+.buttonContainer button:nth-child(2):hover {
   background-color: var(--celadon-blue);
   border-color: var(--celadon-blue);
-  color: var(--honeydew)
+  color: var(--honeydew);
 }
 
 .companyInfo {
   border: 1px solid var(--gray);
   border-radius: 10px;
-  padding: 50px 80px
+  padding: 50px 80px;
 }
 
 .companyInfo p {
   text-align: center;
   color: var(--celadon-blue);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cards h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cards p {
+  color: var(--celadon-blue);
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid var(--gray);
+  border-radius: 10px;
+  max-width: 250px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px 0px rgba(146,151,156,0.75);
+-webkit-box-shadow: 5px 5px 10px 0px rgba(146,151,156,0.75);
+-moz-box-shadow: 5px 5px 10px 0px rgba(146,151,156,0.75);
+}
+
+.card p {
+  font-size: 0.8rem;
+}
+
+.card img {
+  width: 100px;
+  filter: invert(89%) sepia(14%) saturate(175%) hue-rotate(169deg)
+    brightness(82%) contrast(82%);
+}
+
+.card:hover {
+  animation: floating 2s ease-in-out infinite;
+}
+
+footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 100px 20px;
+}
+
+footer img {
+  width: 600px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 20px;
+  border: 2px solid red;
+}
+
+.contact h3 {
+  font-size: 2rem;
+}
+
+.founder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.founder img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 10px;
+  filter: invert(41%) sepia(84%) saturate(312%) hue-rotate(160deg) brightness(89%) contrast(81%);
+}
+
+.founder a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color:var(--celadon-blue);
+  font-weight: 500;
 }
