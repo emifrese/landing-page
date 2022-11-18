@@ -1,4 +1,8 @@
+/* ----- fonts ----- */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+
+/* ----- keyframes ----- */
 
 @keyframes floating {
   0% {
@@ -133,8 +137,7 @@ footer {
 
 .listLinks a:hover,
 .listLinks a:active,
-.listLinksMenu a:active
- {
+.listLinksMenu a:active {
   color: var(--gray);
 }
 
@@ -331,6 +334,8 @@ main {
   animation: floating 2s ease-in-out infinite;
 }
 
+/* ----- Footer ----- */
+
 footer {
   display: flex;
   align-items: flex-start;
@@ -399,6 +404,8 @@ footer img {
     brightness(89%) contrast(81%);
 }
 
+/* ----- Tablet ----- */
+
 @media (max-width: 1024px) and (min-width: 768px) {
   .listLinks {
     display: none;
@@ -465,9 +472,11 @@ footer img {
   }
 }
 
+/* ----- Mobile ----- */
+
 @media (max-width: 767px) {
   body {
-    padding: 0
+    padding: 0;
   }
 
   .listLinks {
@@ -483,7 +492,7 @@ footer img {
   .burgerMenu img {
     width: 100%;
   }
-  
+
   #burgerMenu:checked ~ .menu {
     display: block;
     position: absolute;
@@ -514,7 +523,8 @@ footer img {
     gap: 20px;
   }
 
-  .heroInfo h1, .heroInfo p {
+  .heroInfo h1,
+  .heroInfo p {
     width: 100%;
   }
 
@@ -530,7 +540,7 @@ footer img {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .card {
     width: 80%;
     max-width: unset;
