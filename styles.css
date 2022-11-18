@@ -26,6 +26,40 @@
   }
 }
 
+@keyframes sideMenu {
+  0% {
+    transform: translateX(0px);
+    opacity: 20%;
+  }
+
+  50% {
+    transform: translateX(-150px);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translateX(-300px);
+    opacity: 100%;
+  }
+}
+
+@keyframes fallingMenu {
+  0% {
+    transform: translateY(0px);
+    opacity: 20%;
+  }
+
+  50% {
+    transform: translateY(175px);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translateY(462px);
+    opacity: 100%;
+  }
+}
+
 :root {
   --imperial-red: #e63946ff;
   --honeydew: #f1faeeff;
@@ -53,6 +87,8 @@ main,
 footer {
   background: var(--honeydew);
 }
+
+/* ----- Header ----- */
 
 .navbar {
   top: 0;
@@ -95,7 +131,10 @@ footer {
   color: var(--dark);
 }
 
-.listLinks a:hover, .listLinks a:active {
+.listLinks a:hover,
+.listLinks a:active,
+.listLinksMenu a:active
+ {
   color: var(--gray);
 }
 
@@ -126,6 +165,34 @@ footer {
   left: 295px;
   animation-delay: 1s;
 }
+
+.burgerMenu {
+  display: none;
+}
+
+#burgerMenu {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.listLinksMenu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.listLinksMenu a {
+  text-decoration: none;
+  color: var(--celadon-blue);
+  font-weight: 500;
+}
+
+/* ----- Main ----- */
 
 main {
   display: flex;
@@ -202,7 +269,7 @@ main {
   border: 1px solid var(--gray);
   border-radius: 10px;
   padding: 50px 80px;
-  
+
   box-shadow: 0px 5px 10px 0px rgba(146, 151, 156, 0.75);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(146, 151, 156, 0.75);
   -moz-box-shadow: 0px 5px 10px 0px rgba(146, 151, 156, 0.75);
@@ -330,4 +397,175 @@ footer img {
 .companyMedia img {
   filter: invert(41%) sepia(84%) saturate(312%) hue-rotate(160deg)
     brightness(89%) contrast(81%);
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .listLinks {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: flex;
+    align-items: center;
+    width: 30px;
+  }
+
+  .burgerMenu img {
+    width: 100%;
+  }
+
+  #burgerMenu:checked ~ .menu {
+    display: block;
+    position: absolute;
+    width: 468px;
+    height: 350px;
+    background: var(--honeydew);
+    border: 1px solid var(--gray);
+    top: 112px;
+    right: -150px;
+    text-align: center;
+    animation-name: sideMenu;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .buttonContainer button {
+    margin: 5px;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+  }
+
+  footer img {
+    width: 100%;
+  }
+
+  .contact {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .founder {
+    width: 100%;
+    align-items: center;
+  }
+
+  .companyMedia {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .companyMedia img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0
+  }
+
+  .listLinks {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: flex;
+    align-items: center;
+    width: 30px;
+  }
+
+  .burgerMenu img {
+    width: 100%;
+  }
+  
+  #burgerMenu:checked ~ .menu {
+    display: block;
+    position: absolute;
+    width: calc(100vw);
+    height: 350px;
+    background: var(--honeydew);
+    border: 1px solid var(--gray);
+    border-top: 0;
+    top: -350px;
+    right: 0px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    animation-name: fallingMenu;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .heroInfo h1, .heroInfo p {
+    width: 100%;
+  }
+
+  .cards {
+    align-items: center;
+  }
+
+  .cards p {
+    width: 80%;
+  }
+
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 80%;
+    max-width: unset;
+  }
+
+  .card:hover {
+    animation: unset;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+  }
+
+  footer img {
+    width: 100%;
+  }
+
+  .contact {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .founder {
+    width: 100%;
+    align-items: center;
+  }
+
+  .companyMedia {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .companyMedia img {
+    width: 30px;
+  }
 }
