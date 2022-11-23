@@ -13,26 +13,40 @@
 <body>
     <header>
         <nav class="navbar">
-            <img src="./assets/logo1.png" alt="">
-            <ul class="listLinks">
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-                <li><a href="#">TAKE AWAY</a></li>
-                <li><a href="#">CONTACTANOS</a></li>
-            </ul>
+            <img src="./assets/logo1-removebg-preview.png" alt="">
+            <div class="listContainer">
+                <ul class="listLinks">
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">PRODUCTOS</a></li>
+                    <li><a href="#">TAKE AWAY</a></li>
+                    <li><a href="#">CONTACTANOS</a></li>
+                </ul>
+                <input type="checkbox" name="burgerMenu" id="burgerMenu">
+                <label for="burgerMenu" class="burgerMenu">
+                    <img src="./assets/burger_menu.svg" alt="">
+                </label>
+                <div class="menu">
+                    <ul class="listLinksMenu">
+                        <li><a href="#">INICIO</a></li>
+                        <li><a href="#">PRODUCTOS</a></li>
+                        <li><a href="#">TAKE AWAY</a></li>
+                        <li><a href="#">CONTACTANOS</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <section class="hero">
             <div class="heroInfo">
-                <h2>Your company slogan here.</h2>
+                <h1>Your company slogan here.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi maxime cum minima est quas.</p>
                 <div class="buttonContainer">
                     <button>Call to Action</button>
                     <button>Learn More</button>
                 </div>
             </div>
-            <img src="./assets/undraw_basketball_re_fsbx.svg" alt="company">
+            <img src="./assets/working_out.svg" alt="company">
         </section>
 
         <section class="companyInfo">
@@ -40,7 +54,55 @@
                 repellendus, quaerat at ratione inventore odit placeat dolores aut culpa atque debitis ex omnis expedita
                 ad repudiandae cupiditate corporis cum blanditiis facilis officiis hic. Natus, culpa sed?</p>
         </section>
+
+        <section class="cards">
+            <h2>Our advantages</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, fugiat.</p>
+            <div class="cardsContainer">
+                <div class="card">
+                    <img src="./assets/dumbell.svg" alt="">
+                    <h4>Benefit 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iure eveniet neque quia?
+                        Reprehenderit dolorum ad ea maxime aliquid voluptatum.</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/heart.svg" alt="">
+                    <h4>Benefit 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iure eveniet neque quia?
+                        Reprehenderit dolorum ad ea maxime aliquid voluptatum.</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/calendar.svg" alt="">
+                    <h4>Benefit 3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iure eveniet neque quia?
+                        Reprehenderit dolorum ad ea maxime aliquid voluptatum.</p>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <div class="founder">
+                <h4>Frese, Emiliano</h4>
+                <a href="https://goo.gl/maps/PXjCmaD6qejT5fxM8" target="_blank" id="location"><img
+                        src="./assets/location-dot-solid.svg" alt="location">Ensenada, Buenos Aires</a>
+
+                <a href="mailto:emilianomartindominguezfrese@gmail.com" target="_blank"><img
+                        src="./assets/envelope-regular.svg" alt="email">
+                    Send us a mail</a>
+
+                <a href="https://wa.me/+542995282484" target="_blank"><img src="./assets/whatsapp.svg"
+                        alt="whatsapp">Send us a text</a>
+            </div>
+            <div class="companyMedia">
+                <a href=""><img src="./assets/twitter.svg" alt=""></a>
+                <a href=""><img src="./assets/instagram.svg" alt=""></a>
+                <a href=""><img src="./assets/facebook.svg" alt=""></a>
+            </div>
+        </div>
+        <img src="./assets/contact_us.svg" alt="">
+    </footer>
 </body>
 
 </html>
