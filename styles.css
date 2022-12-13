@@ -445,7 +445,7 @@ footer img {
     background: var(--honeydew);
     border: 1px solid var(--gray);
     top: 112px;
-    right: -300px;
+    right: -30%;
     text-align: center;
     animation-name: sideMenu;
     animation-duration: 0.3s;
@@ -491,10 +491,6 @@ footer img {
 /* ----- Mobile ----- */
 
 @media (max-width: 767px) {
-  body {
-    padding: 0;
-  }
-
   .listLinks {
     display: none;
   }
