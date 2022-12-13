@@ -81,6 +81,10 @@
   font-family: "Roboto";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #eee;
   display: flex;
@@ -159,7 +163,7 @@ footer {
 }
 
 .listLinks li:nth-child(2) {
-  left: 70px;
+  left: 100px;
   animation-delay: 0.33s;
 }
 
@@ -183,6 +187,8 @@ footer {
 
 .menu {
   display: none;
+  z-index: 1;
+  width: 100%
 }
 
 .listLinksMenu {
@@ -242,6 +248,7 @@ main {
   display: block;
   font-style: italic;
   animation: floating 2s ease-in-out infinite;
+  z-index:0;
 }
 
 .heroInfo p {
@@ -434,12 +441,11 @@ footer img {
   #burgerMenu:checked ~ .menu {
     display: block;
     position: absolute;
-    width: 468px;
-    height: 350px;
+    height: 400px;
     background: var(--honeydew);
     border: 1px solid var(--gray);
     top: 112px;
-    right: -150px;
+    right: -300px;
     text-align: center;
     animation-name: sideMenu;
     animation-duration: 0.3s;
